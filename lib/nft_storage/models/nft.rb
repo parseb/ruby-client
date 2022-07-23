@@ -172,11 +172,11 @@ module NFTStorage
     # Custom attribute writer method checking allowed values (enum).
     # @param [Object] type Object to be assigned
     def type=(type)
-      validator = EnumAttributeValidator.new('String', ["directory", "image/jpeg", "application/json", "other mime types"])
-      unless validator.valid?(type)
-        fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
-      end
-      @type = type
+      #validator = EnumAttributeValidator.new('String', ["directory", "image/jpeg", "application/json", "other mime types"])
+      #unless validator.valid?(type)
+       # fail ArgumentError, "invalid value for \"type\", must be one of #{validator.allowable_values}."
+      #end
+      @type = "application/json"
     end
 
     # Checks equality by comparing each attribute.
